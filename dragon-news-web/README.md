@@ -1,16 +1,51 @@
-# React + Vite
+ # <img src="assets/logo.png">
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Dragoon News is a responsive front-end web application build with react that delivers real-time news articles on a variety of topics, complete with user authentication for personalized access. Built with modern web technologies, the app ensures a seamless user experience across devices and secure login functionality using firebase authentication.let's build the project together. 😎
 
-Currently, two official plugins are available:
+ 
+### Endpoints
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. **Get All News Categories**
 
-## React Compiler
+   - **URL**: `/news/categories`
+   - **Full URL**: https://openapi.programming-hero.com/api/news/categories
+   - **Method**: `GET`
+   - **Description**: Retrieves a list of all available news categories.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. **Get All News in a Category**
 
-## Expanding the Oxlint configuration
+   - **URL Format**: `/news/category/{category_id}`
+   - **Full URL Example**: https://openapi.programming-hero.com/api/news/category/01
+   - **Method**: `GET`
+   - **Description**: Retrieves all news articles within a specified category.
+   - **Path Parameter**:
+     - `category_id` (string): The unique ID of the category.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+3. **Get News Detail by ID**
+   - **URL Format**: `/news/{news_id}`
+   - **Full URL Example**: https://openapi.programming-hero.com/api/news/0282e0e58a5c404fbd15261f11c2ab6a
+   - **Method**: `GET`
+   - **Description**: Retrieves detailed information about a specific news article.
+   - **Path Parameter**:
+     - `news_id` (string): The unique ID of the news article.
+
+## Layouts & Design
+
+There will be three layour for the project. watch below designs to understand layout structure/
+
+### News Layout
+
+ <img src="https://i.ibb.co.com/sJFwsTBZ/home-layout.png"/>
+
+### News-Details Layout
+
+ <img src="https://i.ibb.co.com/4ZJ3wBfq/news-details-layout.png"/>
+
+### Auth Layout
+
+<table>
+ <tr>
+   <td> <img  src="https://i.ibb.co.com/BVtvwgbN/auth-layout-login.png"/></td>
+   <td> <img src="https://i.ibb.co.com/27Rmt7C5/auth-layout-register.png"/></td>
+ </tr> 
+</table>
